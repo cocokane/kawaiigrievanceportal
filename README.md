@@ -20,8 +20,7 @@ A kawaii-styled desktop app to share with your friends. Just a fun project I vib
     }
     ```
     *   Replace `<YOUR_BOT_TOKEN_FROM_BOTFATHER>` with the token you received from @BotFather (e.g., `7295500229:AAHF-mm46xGgdbNRgJCkF5zX8d2Rvkj3EDc`).
-    *   Replace `<YOUR_TARGET_CHAT_ID>` with the ID of your Telegram channel (e.g., `-1001234567890`). To get the chat id, type ```https://api.telegram.org/bot<BOT_ID>/getUpdates``` into your browser, replacing `<BOT_ID>` with your bot's token. The chat ID will be in the response JSON under `message.chat.id`. (If you've set it up correctly, that is.s)
-    **Note:** As of now I have added my credentials in the `config.json` file, so you can test the app without creating your own bot. However, I recommend creating your own bot for security and privacy reasons.
+    *   Replace `<YOUR_TARGET_CHAT_ID>` with the ID of your Telegram channel (e.g., `-1001234567890`). To get the chat id, type ```https://api.telegram.org/bot<BOT_ID>/getUpdates``` into your browser, replacing `<BOT_ID>` with your bot's token. The chat ID will be in the response JSON under `message.chat.id`. (If you've set it up correctly, that is)
 
 3.  **Place Assets:**
     *   Place your desired background image as `pixelback.png` inside the `assets/` folder.
