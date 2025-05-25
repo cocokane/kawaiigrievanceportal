@@ -25,7 +25,7 @@
     "appId": "com.cutegrievanceportal.app",
     "productName": "Cute Grievance Portal",
     "win": {
-      "target": "nsis"
+      "target": "portable"
     },
     "files": [
       "**/*",
