@@ -12,7 +12,7 @@
   <img src="assets/bird.gif" id="bird" alt="flying bird" style="display:none;">
 
   <div id="name-capture-card" class="card">
-    <h2>Kya bulae aapko? 🤗</h2>
+    <h2>What's your name? 🤗</h2>
     <input type="text" id="name-input" placeholder="Your name">
     <button id="save-name-button">Remember me uWu</button>
   </div>
@@ -21,7 +21,7 @@
     <h2>Tell me your problems, <span id="sender-name-display"></span>!</h2>
     <form id="grievance-form">
       <div>
-        <label for="mood">Mood Batao Pookie</label>
+        <label for="mood">Mood:</label>
         <select id="mood" name="mood">
           <option value="😊">😊 Happy</option>
           <option value="😢">😢 Sad</option>
@@ -40,15 +40,15 @@
         <label for="text">Grievance bolo:</label>
         <textarea id="text" name="text" maxlength="140" rows="3"></textarea>
       </div>
-      <div class="button-container">
-        <button type="submit" id="send-button">Send Grievance 🐦</button>
         <div class="file-input-wrapper">
-          <input type="file" id="img" name="img" accept="image/*" style="display: none;">
+          <input type="file" id="img" name="img" accept="image/*" class="hidden-file">
           <button type="button" id="file-button" class="file-btn">📎 Add Image</button>
         </div>
+      <div class="button-container">
+        <button type="submit" id="send-button">Send Grievance 🐦</button>
       </div>
     </form>
-    <button id="rename-button" class="rename-btn">Rename me</button>
+    <button id="rename-button" class="rename-btn">Rename me🥺</button>
   </div>
 
   <!-- Optional: Confetti -->

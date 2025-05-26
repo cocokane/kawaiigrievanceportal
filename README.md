@@ -41,3 +41,13 @@ To package the application for distribution:
 npm run pack
 ```
 This will create a distributable version in a `dist` or similar directory, based on your `electron-builder` configuration. Ensure you run this using admin privileges if you're on Windows, that is how it worked for me.
+
+A few screenshots of the app:
+1. The login screen where you enter your name:
+![alt text](image.png)
+2. The grievance submission screen (You can send a 140-character grievance, along with the urgency level and an optional image): 
+![alt text](image-1.png)
+3. The notification screen after submitting a grievance:
+![alt text](image-2.png)
+4. How you can view your grievances on the telegram channel:
+![alt text](image-3.png)

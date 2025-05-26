@@ -31,6 +31,7 @@ body {
   max-width: 500px;
   margin-bottom: 20px;
   text-align: center;
+  position: relative; /* 🔧 Makes children like rename-btn anchor here */
 }
 
 .card h2 {
@@ -88,23 +89,32 @@ button:disabled {
     background-color: #FFD54F; /* Lighter, like base, when disabled */
     cursor: not-allowed;
 }
+.hidden-file {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  width: 0.1px;
+  height: 0.1px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
 
 .rename-btn {
   position: absolute;
   bottom: 15px;
-  right: 120px;
+  right: 15px;
   background-color: #fec700;
   font-size: 0.6em;
   padding: 8px;
-  margin: 10px;
-  z-index: 1001; /* Ensure it's on top of other content */
-  display: inline-block;
+  margin: 0;
+  z-index: 10;
 }
 
 .button-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   margin-top: 20px;
 }

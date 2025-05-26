@@ -68,6 +68,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 800,
+    icon: path.join(__dirname, 'assets', 'icon.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
@@ -92,15 +93,15 @@ app.on('ready', () => {
 });
 
 app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') {
-    app.quit();
+  if (process.platform !== 'darwin') { 
+    app.quit(); // Quit the app when all windows are closed except on macOS
   }
 });
 
 app.on('activate', function () {
   if (mainWindow === null) {
     if (loadConfig()) {
-        createWindow();
+        createWindow(); // Recreate the window if it was closed, macOS specific behavior
     }
   }
 });
@@ -111,7 +112,11 @@ ipcMain.handle('send-grievance', async (event, { senderName, text, mood, importa
   }
 
   const TELEGRAM_API_BASE = `https://api.telegram.org/bot${config.BOT_TOKEN}`;
-  const messageText = `💌 *${senderName}* (${mood}, ${importance}/10):\n${text}`;
+  const messageText = 
+    `💌 *${senderName}*: 
+  Mood: ${mood} 
+  Importance: ${importance}/10
+  ${text}`;
 
   try {
     let response;
